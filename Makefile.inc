@@ -1,5 +1,5 @@
-CXXFLAGS= -Wall -pthread -O0 -g $(INCLUDE_DIRS)
-CFLAGS= -Wall -pthread -O0 -g $(INCLUDE_DIRS)
+CXXFLAGS += -Wall -pthread -O0 -g $(INCLUDE_DIRS)
+CFLAGS += -Wall -pthread -O0 -g $(INCLUDE_DIRS)
 INCLUDE_DIRS=-I./include -I../include
 
 CC=gcc
@@ -21,16 +21,6 @@ SLIBC_LIB_SO=lib$(SLIBC_NAME).so.$(VER_MAJOR).$(VER_MINOR).$(VER_RELEASE)
 
 SLIBC_LIB_SONAME=lib$(SLIBC_NAME).so
 
-libdir.x86_64 = /usr/lib64
-libdir.i686   = /usr/lib
-
-MACHINE := $(shell uname -m)
-SYSTEM := $(shell ./checkdistro.sh)
-
-ifneq ($(SYSTEM),debian)
-libdir = $(libdir.$(MACHINE))
-else
-libdir = $(libdir.i686)
-endif
+libdir = /usr/lib
 includedir = /usr/include/
 mandir = /usr/share/man/

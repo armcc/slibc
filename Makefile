@@ -15,7 +15,7 @@ archive:
 
 install_devel:
 	install -d $(DESTDIR)/$(includedir)/slibc/
-	install -D include/slibc/* $(DESTDIR)/$(includedir)/slibc/
+	install -m 0644 include/slibc/* $(DESTDIR)/$(includedir)/slibc/
 
 install_doc: doc
 	install -d $(DESTDIR)/$(mandir)/man3/
@@ -23,7 +23,7 @@ install_doc: doc
 
 install: test install_devel install_doc
 	install -d $(DESTDIR)/$(libdir)/
-	install -D src/$(SLIBC_LIB_SO) $(DESTDIR)/$(libdir)/$(SLIBC_LIB_SO)
+	install -m 0644 src/$(SLIBC_LIB_SO) $(DESTDIR)/$(libdir)/$(SLIBC_LIB_SO)
 
 # build targets
 tests_slibc: slibc

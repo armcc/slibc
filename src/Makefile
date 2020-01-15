@@ -17,7 +17,7 @@ SLIBC_OBJS=slibc.o stdio_fmt_s.o string_s.o stdio_s.o stdlib_s.o \
 # 	ar rcs $(SLIBC_LIB) $(SLIBC_OBJS)
 
 $(SLIBC_LIB_SO): $(SLIBC_OBJS)
-	$(CC) -shared -Wl,-soname,$(SLIBC_LIB_SONAME) -o $(SLIBC_LIB_SO) $(SLIBC_OBJS)
+	$(CC) $(LDFLAGS) -shared -Wl,-soname,$(SLIBC_LIB_SONAME) -o $(SLIBC_LIB_SO) $(SLIBC_OBJS)
 
 %_cpp.o: %.c
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
