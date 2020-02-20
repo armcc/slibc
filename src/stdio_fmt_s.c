@@ -300,9 +300,11 @@ int vscanf_s(const char * restrict format, va_list arg)
 							 EINVAL,
 							 EOF);
 
+#if 0
 	_CONSTRAINT_VIOLATION_IF(arg == NULL,
 							 EINVAL,
 							 EOF);
+#endif
 
 	return vfscanf_s(stdin, format,arg);
 }
@@ -333,9 +335,11 @@ int vsscanf_s(const char * restrict s,
 							 EINVAL,
 							 EOF);
 
+#if 0
 	_CONSTRAINT_VIOLATION_IF(arg == NULL,
 							 EINVAL,
 							 EOF);
+#endif
 
 	FILE *stream;
 	stream = fmemopen ((char *) s, strlen(s), "r");
@@ -392,9 +396,11 @@ int vfscanf_s(FILE * restrict stream,
 							 EINVAL,
 							 EOF);
 
+#if 0
 	_CONSTRAINT_VIOLATION_IF(arg == NULL,
 							 EINVAL,
 							 EOF);
+#endif
 
 	return 	gnu_vfscanf_s(stream, format, arg, NULL);
 }
