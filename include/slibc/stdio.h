@@ -373,6 +373,7 @@ int vprintf_s(const char * restrict format,
 	      va_list arg);
 
 		  
+#if 0
 ///////////////////////////////
 ///   The scanf_s function behaves as fscanf_s when fscanf_s is called with an argument of stdin.
 ///
@@ -479,6 +480,7 @@ int fscanf_s(FILE * restrict stream,
 
 int vfscanf_s(FILE * restrict stream,
 	     	const char * restrict format, va_list arg);
+#endif
 
 SLIBC_END_DECLS
 

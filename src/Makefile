@@ -10,7 +10,7 @@ all: $(SLIBC_LIB_SO)
 
 SLIBC_OBJS=slibc.o stdio_fmt_s.o string_s.o stdio_s.o stdlib_s.o \
 	time_s.o stdio_ext_s.o \
-	gnu_qsort_s.o gnu_bsearch_s.o gnu_strtok_s.o gnu_vfscanf_s.o 
+	gnu_qsort_s.o gnu_bsearch_s.o gnu_strtok_s.o
 
 # static libraries
 # $(SLIBC_LIB): $(SLIBC_OBJS)

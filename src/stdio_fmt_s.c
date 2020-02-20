@@ -293,6 +293,7 @@ int printf_s(const char * restrict format, ...)
 	return ret;
 }
 
+#if 0
 
 int vscanf_s(const char * restrict format, va_list arg)
 {
@@ -404,3 +405,5 @@ int vfscanf_s(FILE * restrict stream,
 
 	return 	gnu_vfscanf_s(stream, format, arg, NULL);
 }
+
+#endif
