@@ -17,7 +17,8 @@ SLIBC_OBJS=slibc.o stdio_fmt_s.o string_s.o stdio_s.o stdlib_s.o \
 # 	ar rcs $(SLIBC_LIB) $(SLIBC_OBJS)
 
 $(SLIBC_LIB_SO): $(SLIBC_OBJS)
-	$(CC) $(LDFLAGS) -shared -Wl,-soname,$(SLIBC_LIB_SONAME) -o $(SLIBC_LIB_SO) $(SLIBC_OBJS)
+	$(CC) $(LDFLAGS) -shared -Wl,-soname,$(SLIBC_LIB_SONAME) -o $(SLIBC_LIB_SONAME) $(SLIBC_OBJS)
+	ln -sf $(SLIBC_LIB_SONAME) $(SLIBC_LIB_SO)
 
 %_cpp.o: %.c
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
@@ -25,7 +26,6 @@ $(SLIBC_LIB_SO): $(SLIBC_OBJS)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 prepare_test:
-	ln -s $(SLIBC_LIB_SO) $(SLIBC_LIB_SONAME)
 
 clean: 
 	rm -f *.o *.gcda *.gcno *.gcov $(SLIBC_LIB) \

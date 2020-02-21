@@ -17,9 +17,9 @@ SLIBC_LIB=lib$(SLIBC_NAME).a
 
 SLIBC_LIB_SH=lib$(SLIBC_NAME).so
 
-SLIBC_LIB_SO=lib$(SLIBC_NAME).so.$(VER_MAJOR).$(VER_MINOR).$(VER_RELEASE)
+SLIBC_LIB_SO=lib$(SLIBC_NAME).so
 
-SLIBC_LIB_SONAME=lib$(SLIBC_NAME).so
+SLIBC_LIB_SONAME=lib$(SLIBC_NAME).so.$(VER_MAJOR).$(VER_MINOR).$(VER_RELEASE)
 
 libdir = /usr/lib
 includedir = /usr/include/

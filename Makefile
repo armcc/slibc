@@ -23,7 +23,8 @@ install_doc: doc
 
 install: install_devel
 	install -d $(DESTDIR)/$(libdir)/
-	install -m 0644 src/$(SLIBC_LIB_SO) $(DESTDIR)/$(libdir)/$(SLIBC_LIB_SO)
+	install -m 0644 src/$(SLIBC_LIB_SONAME) $(DESTDIR)/$(libdir)/$(SLIBC_LIB_SONAME)
+	ln -sf $(SLIBC_LIB_SONAME) $(DESTDIR)/$(libdir)/$(SLIBC_LIB_SO)
 
 # build targets
 tests_slibc: slibc
