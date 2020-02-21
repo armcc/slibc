@@ -1,5 +1,5 @@
-CXXFLAGS += -Wall -pthread -O0 -g $(INCLUDE_DIRS)
-CFLAGS += -Wall -pthread -O0 -g $(INCLUDE_DIRS)
+CXXFLAGS += -Wall -pthread $(INCLUDE_DIRS)
+CFLAGS += -Wall -pthread $(INCLUDE_DIRS)
 INCLUDE_DIRS=-I./include -I../include
 
 CC=gcc
