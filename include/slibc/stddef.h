@@ -26,8 +26,8 @@
 // Glibc headers often include stddef.h only to get some types.
 // In that case the caller defined __need_TYPE (e.g. __need_size_t).
 // If stddef.h is included in a normal way, it will define the macro _STDDEF_H
-// (Let's hope that this macro name is portable)
-#if defined(_STDDEF_H) && !defined(SLIBC_STDDEF_H)
+// (Let's hope that this macro name is portable) (Edit: it's not, breaks with clang...)
+#if (defined(_STDDEF_H) || defined (__STDDEF_H)) && !defined(SLIBC_STDDEF_H)
 #define  SLIBC_STDDEF_H
 
 // TR 24731-1 is not available if __STDC_WANT_LIB_EXT1__ equals 0
