@@ -20,7 +20,7 @@
 /// @file
 /// Contains those _s-functions that are related to time
 ///////////////////////////////////////////////////////
-#include_next <time.h>
+#include <time.h>
 
 // Glibc headers often include time.h only to get some types
 // in that case the caller defined __need_TYPE (e.g. __need_time_t)

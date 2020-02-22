@@ -21,7 +21,7 @@
 /// TR 24731-1 errno.h defines the type errno_t. 
 ///////////////////////////////////////////////////////
 // include the system-header first
-#include_next <errno.h>
+#include <errno.h>
 
 // Glibc headers often include errno.h only to get some types
 // in that case the caller defined __need_TYPE (e.g. __need_Emath)

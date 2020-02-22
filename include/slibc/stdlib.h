@@ -20,7 +20,7 @@
 /// @file
 /// Contains those _s functions that were added to C99's /usr/include/stdlib.h
 ///////////////////////////////////////////////////////
-#include_next <stdlib.h>
+#include <stdlib.h>
 
 #ifndef SLIBC_STDLIB_H
 #define SLIBC_STDLIB_H

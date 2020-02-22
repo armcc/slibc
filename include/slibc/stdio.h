@@ -20,7 +20,7 @@
 /// @file
 /// Contains those _s-functions that are related to stdio
 ///////////////////////////////////////////////////////
-#include_next <stdio.h>
+#include <stdio.h>
 
 #ifndef SLIBC_STDIO_H
 #define SLIBC_STDIO_H

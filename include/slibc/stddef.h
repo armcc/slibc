@@ -21,7 +21,7 @@
 /// TR 24731-1 stddef.h defines the type rsize_t. 
 ///////////////////////////////////////////////////////
 // include the system-header first
-#include_next <stddef.h>
+#include <stddef.h>
 
 // Glibc headers often include stddef.h only to get some types.
 // In that case the caller defined __need_TYPE (e.g. __need_size_t).

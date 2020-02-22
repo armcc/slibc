@@ -26,7 +26,7 @@
 #define __STDC_LIMIT_MACROS 
 #endif
 // include the system-header first
-#include_next <stdint.h>
+#include <stdint.h>
 
 #ifndef  SLIBC_STDINT_H
 #define  SLIBC_STDINT_H

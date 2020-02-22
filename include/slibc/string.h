@@ -20,7 +20,7 @@
 /// @file
 /// Contains those _s-functions that are related to strings
 ///////////////////////////////////////////////////////
-#include_next <string.h>
+#include <string.h>
 
 #ifndef SLIBC_STRING_H
 #define SLIBC_STRING_H
