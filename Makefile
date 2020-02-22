@@ -21,7 +21,7 @@ install_doc: doc
 	install -d $(DESTDIR)/$(mandir)/man3/
 	install -m 444 -D doc/man/man3/* $(DESTDIR)/$(mandir)/man3/
 
-install: test install_devel install_doc
+install: install_devel
 	install -d $(DESTDIR)/$(libdir)/
 	install -m 0644 src/$(SLIBC_LIB_SO) $(DESTDIR)/$(libdir)/$(SLIBC_LIB_SO)
 
